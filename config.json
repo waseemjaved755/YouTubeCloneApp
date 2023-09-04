@@ -6,7 +6,13 @@
         "username" : "postgres",
         "password" : "waseem",
         "database" : "ytDB",
-        "logging" : true,
+        "logging" : false,
         "dialect" : "postgres"
+    },
+
+    "jwtSecret" :
+    {
+       "secret" : "602be74dfa289d708f5c17d21cd6f104ed9cd1949979f84a86ebfb989edcd2a68009931bb973c5fe955a3fbd1c46ed43"
+       
     }
 }
