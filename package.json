@@ -19,7 +19,6 @@
   "bin": {
     "youtubeapp": "bin/dbConnection.js"
   },
-  "devDependencies": {},
   "author": "",
   "license": "ISC"
 }
