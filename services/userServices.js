@@ -17,5 +17,17 @@ module.exports = {
       } catch (error) {
         return error;
 }
-    }
+    },
+
+    getUserByEmail: async function (email) {
+        try {
+          const response = await userModel.getUserByEmail(email);
+          if (response) {
+            return response;
+          }
+          return "No Such User Exists";
+        } catch (error) {
+          return error;
+        }
+      }
 };
