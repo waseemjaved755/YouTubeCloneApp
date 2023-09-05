@@ -34,11 +34,11 @@ Play.belongsTo(User, {
 // 1:M Video <--> PlayListVideos
  //Created PlayListVideos and using PlaylistID and VideoID there (M:M)
 
- Play.hasMany(PlaylistVideos, { foreignKey: "cartId" });
+ Play.hasMany(PlaylistVideos, { foreignKey: "playId" });
 PlaylistVideos.belongsTo(Play, {
-  foreignKey: { name: "playlistId", allowNull: false },
+  foreignKey: { name: "playId", allowNull: false },
 });
-Video.hasMany(PlaylistVideos, { foreignKey: "productId" });
+Video.hasMany(PlaylistVideos, { foreignKey: "videoId" });
 PlaylistVideos.belongsTo(Video, {
   foreignKey: { name: "videoId", allowNull: false },
 });
@@ -48,11 +48,11 @@ PlaylistVideos.belongsTo(Video, {
 // 1:M Video <-->History
  //Created History and using userID and VideoID there (M:M)
 
- User.hasMany(History, { foreignKey: "cartId" });
+ User.hasMany(History, { foreignKey: "userId" });
 History.belongsTo(User, {
-  foreignKey: { name: "playlistId", allowNull: false },
+  foreignKey: { name: "userId", allowNull: false },
 });
-Video.hasMany(History, { foreignKey: "productId" });
+Video.hasMany(History, { foreignKey: "videoId" });
 History.belongsTo(Video, {
   foreignKey: { name: "videoId", allowNull: false },
 });
@@ -62,11 +62,11 @@ History.belongsTo(Video, {
 // 1:M Video <--> LikeVideos
  //Created LikeVideos and using userID and VideoID there (M:M)
 
- User.hasMany(LikeVideos, { foreignKey: "cartId" });
+ User.hasMany(LikeVideos, { foreignKey: "userId" });
  LikeVideos.belongsTo(User, {
-  foreignKey: { name: "playlistId", allowNull: false },
+  foreignKey: { name: "userId", allowNull: false },
 });
-Video.hasMany(LikeVideos, { foreignKey: "productId" });
+Video.hasMany(LikeVideos, { foreignKey: "videoId" });
 LikeVideos.belongsTo(Video, {
   foreignKey: { name: "videoId", allowNull: false },
 });
@@ -77,11 +77,11 @@ LikeVideos.belongsTo(Video, {
 // 1:M Video <-->WacthVideos
  //Created WatchVideos and using userID and VideoID there (M:M)
 
- User.hasMany(WatchVideo, { foreignKey: "cartId" });
+ User.hasMany(WatchVideo, { foreignKey: "userId" });
 WatchVideo.belongsTo(User, {
-  foreignKey: { name: "playlistId", allowNull: false },
+  foreignKey: { name: "userId", allowNull: false },
 });
-Video.hasMany(WatchVideo, { foreignKey: "productId" });
+Video.hasMany(WatchVideo, { foreignKey: "videoId" });
 WatchVideo.belongsTo(Video, {
   foreignKey: { name: "videoId", allowNull: false },
 });
