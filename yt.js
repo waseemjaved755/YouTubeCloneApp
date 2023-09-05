@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+/*const fetch = require('node-fetch');
 const { response } = require('./app');
 
 const url = 'https://youtube-search6.p.rapidapi.com/trending?country=US&lang=en';
@@ -20,3 +20,4 @@ try {
 }
 }
 
+*/
