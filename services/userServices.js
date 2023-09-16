@@ -8,7 +8,7 @@ module.exports = {
         body.password = await bcrypt.hash(body.password, saltRounds);
         const response = await userModel.createUser(body);
         console.log("after services");
-
+        console.log(response);
         if (response) {
           delete response.dataValues.password;
           return response;

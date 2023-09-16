@@ -10,6 +10,11 @@ Video.init(
       autoIncrement: true,
       type: DataTypes.INTEGER,
     },
+
+    name: {
+      allowNull: false,
+      type: DataTypes.STRING,
+    },
   },
   {
     sequelize,

@@ -18,6 +18,12 @@ module.exports = {
   createUser: async function (req, res) {
     try {
         console.log("try controller");
+        console.log("try controller");
+
+        console.log("try contr;oller");
+
+        console.log("try controller")
+
       const validate = await createUserSchema.validateAsync(req.body);
       if (validate.error) {
         res.status(StatusCodes.BAD_REQUEST).send({
@@ -29,7 +35,7 @@ module.exports = {
       const response = await userService.createUser(validate);
       console.log("try controller aft validation");
       res.status(StatusCodes.OK).send({
-        data: { response },
+        data:  response ,
         message: ReasonPhrases.OK,
         error: {},
       });
